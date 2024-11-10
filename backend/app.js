@@ -11,7 +11,7 @@ app.use(express.json(), cors());
 const uri = process.env.MONGODB_URL; // Replace with your MongoDB URI and database name
 
 //connecting MongoDB
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(uri);
 const db = mongoose.connection;
 
 db.once("open", () => console.log("Connected"));
